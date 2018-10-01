@@ -1,33 +1,56 @@
 <template>
-  <section class="container">
-    <div>
-      <logo/>
-      <h1 class="title">
-        pinboard-reader-pwa
-      </h1>
-      <h2 class="subtitle">
-        Pinboard Reader PWA
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
-      </div>
+  <section class="flex justify-center items-center h-full">
+    <div class="w-full max-w-xs">
+      <form 
+        class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" 
+        @submit.prevent="signIn">
+        <div class="mb-6">
+          <label
+            for="token" 
+            class="block text-grey-darker text-sm font-bold mb-2">Pinboard Token
+          </label>
+          <input
+            v-model="token"
+            name="token"
+            type="password"
+            required
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline"
+            placeholder="******************">
+        </div>
+        <div class="flex items-center justify-between">
+          <button 
+            class="bg-indigo hover:bg-indigo-dark text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" 
+            type="submit">
+            Sign In
+          </button>
+          <a 
+            class="inline-block align-baseline font-bold text-sm text-indigo hover:text-indigo-darker" 
+            href="https://pinboard.in/settings/password"
+            target="_blank">
+            Get Token
+          </a>
+        </div>
+      </form>
     </div>
   </section>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import { mapActions } from 'vuex'
 
 export default {
-  components: {
-    Logo
+  data() {
+    return {
+      token: ''
+    }
+  },
+
+  methods: {
+    signIn() {
+      this.addUserToken(this.token)
+      this.$router.push('/articles')
+    },
+    ...mapActions(['addUserToken'])
   }
 }
 </script>
