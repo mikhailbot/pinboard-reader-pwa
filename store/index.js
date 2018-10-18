@@ -57,6 +57,16 @@ const createStore = () => {
           addReaderVersion(state.newestArticles, response.data)
         )
       }
+    },
+
+    getters: {
+      getPinboardToken: state => {
+        return state.pinboardToken
+      },
+
+      newestArticles: state => {
+        return state.newestArticles
+      }
     }
   })
 }
