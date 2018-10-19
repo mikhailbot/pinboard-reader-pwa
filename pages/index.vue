@@ -1,12 +1,12 @@
 <template>
-  <section class="flex justify-center items-center h-full">
+  <section class="flex flex-col justify-center items-center h-screen pb-12">
     <div class="w-full max-w-xs">
-      <form 
-        class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" 
+      <form
+        class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
         @submit.prevent="signIn">
         <div class="mb-6">
           <label
-            for="token" 
+            for="token"
             class="block text-grey-darker text-sm font-bold mb-2">Pinboard Token
           </label>
           <input
@@ -18,13 +18,13 @@
             placeholder="******************">
         </div>
         <div class="flex items-center justify-between">
-          <button 
-            class="bg-indigo hover:bg-indigo-dark text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" 
+          <button
+            class="bg-indigo hover:bg-indigo-dark text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             type="submit">
             Sign In
           </button>
-          <a 
-            class="inline-block align-baseline font-bold text-sm text-indigo hover:text-indigo-darker" 
+          <a
+            class="inline-block align-baseline font-bold text-sm text-indigo hover:text-indigo-darker"
             href="https://pinboard.in/settings/password"
             target="_blank">
             Get Token

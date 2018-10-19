@@ -2,7 +2,7 @@
   <div class="p-4 m-4 bg-white rounded">
     <router-link
       to="#"
-      class="text-2xl block text-black font-semibold no-underline mb-4">{{ article.description }}</router-link>
+      class="text-2xl block text-black font-semibold no-underline mb-6">{{ article.description }}</router-link>
 
     <a
       :href="article.href"
