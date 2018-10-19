@@ -20,6 +20,13 @@ module.exports = {
   },
 
   /*
+  ** Router config
+  */
+  router: {
+    middleware: 'check-auth'
+  },
+
+  /*
   ** Customize the progress-bar color
   */
   loading: { color: '#fff' },

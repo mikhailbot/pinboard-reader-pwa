@@ -37,6 +37,7 @@
 
 <script>
 import { mapActions } from 'vuex'
+import { setToken } from '~/utils/auth'
 
 export default {
   data() {
@@ -45,9 +46,16 @@ export default {
     }
   },
 
+  beforeCreate() {
+    if (this.$store.getters.getPinboardToken) {
+      this.$router.push('articles')
+    }
+  },
+
   methods: {
     signIn() {
       this.addUserToken(this.token)
+      setToken(this.token)
       this.$router.push('/articles')
     },
     ...mapActions(['addUserToken'])

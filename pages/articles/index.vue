@@ -16,7 +16,7 @@ import { mapActions, mapGetters } from 'vuex'
 export default {
   components: { ArticleListItem },
 
-  middleware: 'auth',
+  middleware: 'authenticated',
 
   async fetch({ store, redirect }) {
     if (store.state.pinboardToken) {

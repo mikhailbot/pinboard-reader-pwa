@@ -66,6 +66,10 @@ const createStore = () => {
 
       newestArticles: state => {
         return state.newestArticles
+      },
+
+      getArticle: state => hash => {
+        return state.newestArticles.find(article => article.hash === hash)
       }
     }
   })
