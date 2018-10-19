@@ -1,8 +1,8 @@
 <template>
   <div class="p-4 m-4 bg-white rounded">
-    <router-link
-      to="#"
-      class="text-2xl block text-black font-semibold no-underline mb-6">{{ article.description }}</router-link>
+    <nuxt-link
+      :to="'/articles/' + article.hash"
+      class="text-2xl block text-black font-semibold no-underline mb-6">{{ article.description }}</nuxt-link>
 
     <a
       :href="article.href"
