@@ -12,7 +12,12 @@ export default {
   asyncData({ store, params, redirect }) {
     const article = store.getters.getArticle(params.hash)
 
-    return article ? article : redirect('/articles')
+    if (article.readableHtml) {
+      return article
+    } else {
+      window.open(article.href, '_blank')
+      return redirect('/articles')
+    }
   }
 }
 </script>
