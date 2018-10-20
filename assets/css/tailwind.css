@@ -7,10 +7,14 @@ html,body {
   @apply font-sans;
 }
 
+article {
+  @apply leading-normal;
+}
+
 article h3, article h4 {
   @apply py-2;
 }
 
 article p {
-  @apply pt-4 pb-2 leading-normal text-lg;
+  @apply pt-2 pb-4 leading-normal text-lg;
 }
