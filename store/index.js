@@ -22,7 +22,7 @@ const createStore = () => {
       addUserToken({ commit }, payload) {
         commit('addUserToken', payload)
       },
-      async getRecentPins({ commit, state }) {
+      async getNewestArticles({ commit, state }) {
         if (!state.newestArticles.length) {
           const response = await this.$axios.$get(
             `/api/users?list=newest&token=${state.pinboardToken}`

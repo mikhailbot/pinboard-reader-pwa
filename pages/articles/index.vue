@@ -20,7 +20,7 @@ export default {
 
   async fetch({ store, redirect }) {
     if (store.state.pinboardToken) {
-      await store.dispatch('getRecentPins')
+      await store.dispatch('getNewestArticles')
     } else {
       redirect('/')
     }
@@ -35,7 +35,7 @@ export default {
   },
 
   methods: {
-    ...mapActions(['getRecentPins', 'getNewestReaderVersions'])
+    ...mapActions(['getNewestArticles', 'getNewestReaderVersions'])
   }
 }
 </script>
