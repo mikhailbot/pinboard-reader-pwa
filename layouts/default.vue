@@ -3,8 +3,8 @@
     <nuxt/>
 
     <div class="h-12 w-full bg-white border-t border-grey-light fixed pin-b pin-l">
-      <div class="flex h-full items-center">
-        <div class="pl-4 text-indigo-dark"><span class="font-semibold">Pin</span>Reader</div>
+      <div class="flex h-full items-center justify-end">
+        <div class="pr-4 text-indigo-dark"><span class="font-semibold">Pin</span>Reader</div>
       </div>
     </div>
   </div>
