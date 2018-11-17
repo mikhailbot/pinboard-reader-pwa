@@ -1,5 +1,5 @@
 <template>
-  <div class="p-4 m-4 bg-white rounded shadow">
+  <div class="p-4 ml-4 mr-4 mb-4 bg-white rounded shadow">
     <div class="flex items-center justify-between">
       <div class="w-full pr-4">
         <div class="mb-6">

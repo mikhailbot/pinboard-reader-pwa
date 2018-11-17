@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 html,body {
-  @apply bg-grey-lighter;
   @apply font-sans;
 }
 
@@ -17,4 +16,8 @@ article h3, article h4 {
 
 article p {
   @apply pt-2 pb-4 leading-normal text-lg;
+}
+
+article a {
+  @apply text-blue-dark;
 }
