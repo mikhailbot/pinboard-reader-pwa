@@ -29,7 +29,7 @@ module.exports = {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: { color: '#5661B3' },
 
   /*
   ** Global CSS
@@ -50,7 +50,8 @@ module.exports = {
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/dotenv',
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/pwa'
   ],
   /*
   ** Axios module configuration
